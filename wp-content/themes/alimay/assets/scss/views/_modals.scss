@@ -1,0 +1,87 @@
+#modal-window {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(36, 23, 32, 0.9);
+	z-index: 1001;
+	#modal-wrap {
+		$w: 794px;
+		$h: 564px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 794px;
+		height: 564px;
+		margin-top: -($h / 2);
+		margin-left: -($w / 2);
+		background: #fff;
+		.close {
+			display: inline-block;
+			position: absolute;
+			top: 10px;
+			right: 12px;
+			font: 11px 'Conv_mreavessanotreg';
+			cursor: pointer;
+			letter-spacing: 0.55px;
+//			vertical-align: middle;
+			b {
+				padding-left: 4px;
+				display: inline-block;
+				margin-top: -4px;
+				font-size: 18px;
+				vertical-align: middle;
+			}
+		}
+		#modal-content {
+			.loader {
+				left: 50%;
+				margin-left: -33px;
+				margin-top: -33px;
+				position: absolute;
+				top: 50%;
+			}
+			margin: 0 auto;
+			padding: 40px 0 0 0;
+			width: 664px;
+			h1 {
+				margin: 0 0 8px;
+				font: 16px/24px 'Conv_mreavessanotreg';
+				text-transform: uppercase;
+				letter-spacing: 1.6px;
+				text-align: center;
+				small {
+					padding-left: 2px;
+					text-transform: none;
+				}
+			}
+			.bx-prev, .bx-next {
+				position: absolute;
+				top: 50%;
+				margin-top: -14px;
+				width: 19px;
+				height: 28px;
+				background: url('../img/arrows.png');
+				bottom: 49px;
+				@include hide-text;
+				&.disabled {
+					display: none;
+				}
+			}
+			.bx-prev {
+				left: 22px;
+				&:hover {
+					background-position: 0 -84px;
+				}
+			}
+			.bx-next {
+				background-position: 0 -28px;
+				right: 25px;
+				&:hover {
+					background-position: 0 -56px;
+				}
+			}
+		}
+	}
+}

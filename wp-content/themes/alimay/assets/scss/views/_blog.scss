@@ -1,0 +1,458 @@
+#blog-logo {
+	@include hide-text;
+	background: transparent url('../img/blog-header.png') 0 0 no-repeat;
+	width: 613px;
+	height: 140px;
+	margin: -10px 0 10px 194px;
+}
+
+.alternate {
+	margin-bottom: 17px;
+	font-size: 16px;
+	letter-spacing: 1.6px;
+	text-transform: uppercase;
+}
+
+.blog,
+.single,
+.search,
+.archive
+{
+	#page {
+		padding-top: 0;
+	}
+	a {
+		&:link, &:visited {
+			color: $highlight;
+			text-decoration: none;
+		}
+		&:hover {
+			
+		}
+	}
+	font: 16px/23px 'Conv_mreavessanotreg', sans-serif;
+	#sidebar {
+		float: right;
+		width: 308px;
+		margin: 0 34px 0 0;
+		.connected {
+			float: none;
+			padding: 50px 0 20px 14px;
+			text-align: center;
+			a.share {
+				background: transparent url('../img/social2.png');
+				&.fb {
+					height: 13px;
+					width: 7px;
+					background-position: 0 0;
+				}
+				&.twitter {
+					height: 13px;
+					width: 17px;
+					background-position: -24px 0;
+				}
+				&.pinterest {
+					height: 13px;
+					width: 11px;
+					background-position: -57px 0;
+				}
+				&.instagram {
+					height: 13px;
+					width: 12px;
+					background-position: -86px 0;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+		.tweet {
+			position: relative;
+			margin: 0 auto 92px;
+			width: 285px;
+			&:after {
+				content: "";
+				position: absolute;
+				left: 50%;
+				margin-left: -71px;
+				bottom: -52px;
+				display: block;
+				width: 142px;
+				height: 1px;
+				background: #d9d7d8;
+			}
+			p {
+				position: relative;
+				font: italic 15px/18px 'Didot';
+				letter-spacing: 0.375px;
+				text-align: center;
+				&:before, &:after {
+					position: absolute;
+					font-style: italic;
+					font-size: 68px;
+					line-height: 1;
+				}
+				quotes: "“" "”" "‘" "’";
+				&:before {
+					content: open-quote;
+					top: -35px;
+					left: 0;
+				}
+				&:after {
+					content: close-quote;
+					right: 0;
+					margin-top: 12px;
+				}
+			}
+		}
+		.module {
+			.currently {
+				position: relative;
+				margin: 0 0 16px;
+				text-align: center;
+				font-size: 12.5px;
+				letter-spacing: 0.625px;
+				text-transform: uppercase;
+				a {
+					color: inherit;
+				}
+				&:after {
+					content: "";
+					display: inline-block;
+					width: 12px;
+					height: 12px;
+					background: transparent url('../img/social.png') 0 0 no-repeat;
+				}
+				&.instagram {
+					&:after {
+						position: relative;
+						top: 3px;
+						margin: 0 0 0 7px;
+						background-position: -74px 0;
+					}
+				}
+				&.twitter {
+					&:after {
+						position: relative;
+						top: 3px;
+						margin: 0 0 0 6px;
+						width: 13px;
+						background-position: -22px 0;
+					}
+				}
+				&.rss {
+					margin: 70px 0 56px;
+					&:before {
+						content: "";
+						position: absolute;
+						left: 50%;
+						margin-left: -71px;
+						top: -29px;
+						display: block;
+						width: 142px;
+						height: 1px;
+						background: #d9d7d8;
+					}
+					&:after {
+						position: relative;
+						width: 11px;
+						height: 10px;
+						margin: 0 0 0 7px;
+						background-position: -88px 0;
+					}
+				}
+			}
+			&.snapwidget {
+				padding: 20px 0 0 15px;
+				@include box-shadow(0 0 4px rgba(88,88,88,.25));
+				background: #fff;
+			}
+			&.archives {
+				margin: 0 0 66px;
+				padding: 40px;
+				background: #f6f6f6;
+				border: 10px solid #f6f6f6;
+				@include box-shadow(0 0 0 1px #d9d7d8 inset, 0 0 4px rgba(88,88,88,.25));
+				text-align: center;
+				h2 {
+					margin: -2px 0 0 0;
+					font: 12px 'Didot';
+					letter-spacing: 1.2px;
+					text-transform: uppercase;
+					span {
+						display: block;
+						margin: 15px 0 16px;
+						text-transform: none;
+						font-style: italic;
+						font-size: 16px;
+						letter-spacing: 1.6px;
+					}
+				}
+				ul {
+					margin: -8px auto 20px;
+					width: 142px;
+					li {
+						border-bottom: 1px solid #d9d7d8;
+						font-size: 12.5px;
+						letter-spacing: 1.875px;
+						line-height: 40px;
+						text-transform: uppercase;
+						&:last-child {
+							border: none;
+						}
+						a {
+							color: inherit;
+							&:hover {
+								color: $highlight;
+							}
+						}
+					}
+				}
+			}
+			&.favorites {
+				margin-bottom: 46px;
+				ul {
+					@include pie-clearfix;
+					> li {
+						float: left;
+						margin: 0 12px 14px 0;
+						width: 148px;
+						@include frame;
+						&:nth-child(2n +2) {
+							margin-right: 0;
+						}
+						img {
+//							@include frame;
+							width: 128px;
+							height: 82px;
+						}
+					}
+				}
+			}
+			&.elsewhere {
+				margin: 0 0 100px;
+				figure {
+					@include frame;
+				}
+				p {
+					margin: 18px 0 0 0;
+					font: italic 14px 'Didot';
+					text-align: center;
+					a {
+						color: inherit;
+						text-decoration: underline;
+					}
+				}
+			}
+			&.blogroll {
+				position: relative;
+				&:after {
+					content: "";
+					position: absolute;
+					top: -47px;
+					left: 50%;
+					margin-left: -71px;
+					height: 1px;
+					width: 142px;
+					background: #d9d7d8;
+				}
+				text-align: center;
+				.alternate {
+					margin-bottom: 14px;
+				}
+				ul {
+					margin-bottom: 40px;
+					li {
+						margin-bottom: 4px;
+					}
+				}
+				a {
+					color: inherit;
+					&:hover {
+						color: $highlight;
+					}
+				}
+			}
+			&.submissions {
+				margin-bottom: 40px;
+				.alternate {
+					text-align: center;
+				}
+				p {
+					font: 10px Arial;
+					line-height: 18px;
+					letter-spacing: 0.25px;
+					a {
+						color: inherit;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	#primary {
+		float: right;
+		width: 678px;
+		margin: 22px 0 0 0;
+		padding: 46px 52px 42px;
+		background: #fff;
+		@include frame;
+		article {
+			margin-bottom: 66px;
+			> header {
+				text-align: center;
+				a:link,
+				a:visited {
+					color: #241720;
+				}
+				time {
+					position: relative;
+					font: 11px Arial;
+					&:after {
+						content: "";
+						position: absolute;
+						bottom: -15px;
+						left: 50%;
+						margin-left: -21px;
+						height: 1px;
+						width: 42px;
+						background: #d9d7d8;
+					}
+				}
+				h1 {
+					margin: 25px 0 4px;
+					font-size: 16px;
+					line-height: 18px;
+					text-transform: uppercase;
+					letter-spacing: 0.4px;
+				}
+				.categories {
+					margin: 0 0 20px;
+					font: italic 14px 'Didot';
+					letter-spacing: 0.35px;
+				}
+			}
+			p {
+				margin-bottom: 18px;
+				padding: 0 18px;
+				width: 550px;
+				> img {
+					min-width: 550px;
+					margin-left: -18px;
+				}
+			}
+			> footer {
+				@include pie-clearfix;
+				width: 550px;
+				padding: 15px 0 0 18px;
+				a.comments {
+					float: left;
+					display: inline-block;
+					margin: 2px 0 0 0;
+					font-size: 14px;
+					text-transform: uppercase;
+				}
+				.sharing {
+					float: right;
+					margin-right: 12px;
+					.addthis_button_pinterest,
+					.addthis_button_facebook_like
+					{
+						margin-right: 11px;
+					}
+					.addthis_button_tweet {
+						width: 81px;
+					}
+					.addthis_button_facebook_send {
+						margin-top: -3px;
+						margin-left: 8px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#comments {
+	padding: 58px 0 0 0;
+	> h2 {
+		text-align: center;
+	}
+	.comments-list {
+		padding: 0 32px;
+		background: #f6f6f6;
+		li {
+			border-bottom: 2px solid #fff;
+			padding: 24px 0 14px;
+			div {
+				font-size: 16px;
+				line-height: 23px;
+			}
+			time {
+				font-size: 11px;
+			}
+			.author {
+				span {
+					text-decoration: underline;
+				}
+			}
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
+#respond {
+	#reply-title {
+		margin: 38px 0 18px;
+		text-align: center;
+	}
+}
+
+.keep-reading {
+	margin: 40px 0 0 0;
+	text-align: center;
+	position: relative;
+	h1 {
+		font: italic 68px 'mrblaketonregular';
+		text-transform: capitalize;
+	}
+	#next-posts, #previous-posts {
+		position: absolute;
+		width: 19px;
+		height: 28px;
+		top: 28px;
+		@include hide-text;
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: transparent url('../img/arrows.png') 0 0 no-repeat;
+		}
+	}
+	#next-posts {
+		right: 62px;
+		a {
+			background-position: 0 -28px;
+			&:hover {
+				background-position: 0 -56px;
+			}
+		}
+	}
+	#previous-posts {
+		left: 68px;
+		a {
+			background-position: 0 0;
+			&:hover {
+				background-position: 0 -84px;
+			}
+		}
+	}
+}
+
+.page-title {
+	margin-bottom: 25px;
+	font: 14px 'Didot';
+	text-align: center;
+}

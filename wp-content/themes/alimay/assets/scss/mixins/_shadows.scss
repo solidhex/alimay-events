@@ -1,0 +1,4 @@
+@mixin frame {
+	border: 10px solid #fff;
+	@include box-shadow(0 0 4px rgba(88,88,88,.25));
+}

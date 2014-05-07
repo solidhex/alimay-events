@@ -1,0 +1,180 @@
+textarea {
+	resize: none;
+}
+
+textarea,
+input[type='text'],
+input[type='search'],
+input[type='email'] {
+	border: 1px solid #d9d7d3;
+	padding: 10px 5px;
+	font: 12.5px 'Conv_mreavessanotreg';
+	letter-spacing: 1.875px;
+	text-transform: uppercase;
+}
+input {
+	&[type='search'] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+	&.search-field {
+		width: 210px;
+	}
+}
+
+.warning {
+	display: inline-block;
+	padding: 2px 0 0 14px;
+	color: $highlight;
+	font: 11px Arial, sans-serif;
+}
+
+.submit,
+#submit
+{
+	float: right;
+	width: 92px;
+	height: 32px;
+	border: none;
+	background: #241720;
+	color: #fff;
+	cursor: pointer;
+	font: 16px 'Conv_mreavessanotreg';
+	letter-spacing: 1.6px;
+	text-transform: uppercase;
+	&:hover {
+		background: #ad7826;
+	}
+}
+	
+
+form[role='search'] {
+	label {
+		position: relative;
+		&:after {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			top: 5px;
+			right: 12px;
+			width: 12px;
+			height: 12px;
+			background: transparent url('../img/search.png') 0 0 no-repeat;
+		}
+	}
+}
+
+#respond {
+	margin: 0 auto;
+	width: 358px;
+}
+
+#commentform {
+	textarea,
+	input[type='text']
+	{
+		padding-left: 14px;
+		width: 358px;
+		font: 11px Arial, sans-serif;
+		text-transform: none;
+		letter-spacing: normal;
+	}
+	p {
+		margin-bottom: 14px;
+	}
+	#after-note {
+		display: inline-block;
+		position: relative;
+		top: -17px;
+		padding-left: 14px;
+		color: #827f7f;
+		font: 11px Arial;
+	}
+	textarea {
+		height: 186px;
+	}
+	#submit {
+		margin-top: -23px;
+	}
+}
+
+input::-moz-placeholder
+{
+	color: #827f7f;
+}
+
+input::-webkit-input-placeholder {
+	color: #827f7f;
+}
+
+#thanks {
+	float: left;
+	margin: 110px 0 0 210px;
+	width: 350px;
+	text-align: center;
+	h1 {
+		margin-bottom: 10px;
+		font: italic 48px 'Didot';
+		span {
+			display: block;
+			margin-bottom: -5px;
+			font-size: 12px;
+			font-style: normal;
+			letter-spacing: 1.2px;
+			text-transform: uppercase;
+		}
+	}
+	p {
+		font: 16px 'Conv_mreavessanotreg';
+	}
+}
+
+ul.form-wrap {
+	float: right;
+	width: 740px;
+	> li {
+		@include pie-clearfix;
+		float: left;
+		margin: 0 24px 14px 0;
+		width: 358px;
+		input[type='text'], 
+		input[type='email'],
+		textarea
+		{
+			margin: 0;
+			padding-right: 14px;
+			padding-left: 14px;
+			width: 100%;
+			color: #34332e;
+			font: 11px Arial;
+			letter-spacing: normal;
+			text-transform: none;
+		}
+		input[type='text'],
+		input[type='email']
+		{
+			height: 36px;
+		}
+		textarea {
+			height: 150px;
+		}
+		&.single {
+			float: none;
+			width: 100%;
+		}
+		&:nth-child(2n + 2) {
+			margin-right: 0;
+		}
+		&.actions {
+			.notes {
+				display: inline-block;
+				position: relative;
+				top: -14px;
+				padding: 0 0 0 14px;
+				color: #827f7f;
+				font: 11px/21px Arial, sans-serif;
+			}
+		}
+	}
+}
