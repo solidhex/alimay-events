@@ -9,7 +9,9 @@
 ?>
 
 <section class="praise-you">
+<?php if (is_developer( 'dev' )): ?>
 	
+<?php else: ?>
 	<?php
 		$items = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date' ) );
 		if ( $items ) :
@@ -34,6 +36,7 @@
 				<?php endif; ?>
 			<?php endforeach; ?>
 	<?php endif; ?>
+<?php endif ?>
 
 </section>
 

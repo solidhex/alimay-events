@@ -13,4 +13,15 @@ add_image_size( 'headshot', 198, 272, true );
 // add support for featured images
 add_theme_support( 'post-thumbnails' );
 
+function is_developer($user_name)
+{
+	$user = wp_get_current_user(); 
+	
+	if ($user->user_login == $user_name) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 ?>
