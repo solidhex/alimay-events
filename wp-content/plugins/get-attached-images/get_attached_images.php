@@ -27,7 +27,7 @@ Updates:
 
 */
 
-function get_attached_images($pageid = FALSE, $size = "thumbnail", $single = FALSE, $prepend = "", $append = "")
+function get_attached_images($pageid = FALSE, $size = "thumbnail", $single = FALSE, $prepend = "", $append = "", $order = 'menu_order')
 {
 	$output = "";
 
@@ -40,7 +40,7 @@ function get_attached_images($pageid = FALSE, $size = "thumbnail", $single = FAL
 	}
 	
 	// now, retrieve all the images
-	$images = get_children(array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'menu_order ID'));
+	$images = get_children(array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => $order ));
 
 	// var_dump($images);
 
