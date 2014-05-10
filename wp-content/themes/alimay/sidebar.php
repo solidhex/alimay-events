@@ -14,8 +14,8 @@
 				?>
 				<li><a href="<?php echo get_category_link( $cat->term_id ); ?>"><?php echo $cat->cat_name; ?></a></li>
 			<?php endforeach; ?>		
-			<!-- <li><a href="#">Categories</a></li>
-			<li><a href="#">Archives</a></li> -->
+			<!-- <li><a href="#">Categories</a></li> -->
+			<li><a href="<?php echo get_permalink( 729 ); ?>">Archives</a></li>
 			</ul>
 		</section>
 		<section class="module">
