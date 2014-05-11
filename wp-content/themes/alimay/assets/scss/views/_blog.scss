@@ -17,7 +17,8 @@
 .single,
 .search,
 .archive,
-.page-template-archives-php
+.page-template-archives-php,
+.page-template-categories-php
 {
 	#page {
 		padding-top: 0;
@@ -468,6 +469,7 @@
 		position: relative;
 		margin-bottom: 18px;
 		font-size: 12.5px;
+		text-transform: uppercase;
 		&:after {
 			content: "";
 			position: absolute;
@@ -494,7 +496,9 @@
 	}
 }
 
-.page-template-archives-php #primary:after {
+.page-template-archives-php #primary:after,
+.page-template-categories-php #primary:after
+{
 	content: "";
 	display: block;
 	position: absolute;
