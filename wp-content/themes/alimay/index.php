@@ -18,7 +18,7 @@
 					<?php the_content(); ?>
 				</div>
 				<footer>
-					<a href="<?php comments_link(); ?>" class="comments"><?php comments_number( 'no comments', '1 comment', '% comments' ); ?></a>
+					<a href="<?php comments_link(); ?>" class="comments"><?php comments_number( 'no comments', '1 comment', '% comments' ); ?> | Add A Comment</a>
 					<div class="sharing">
 						<div class="addthis_toolbox addthis_default_style">
 							<a class="addthis_button_pinterest"></a>
@@ -28,6 +28,30 @@
 						</div>
 					</div>
 				</footer>
+				<section class="also">
+					<h1>You Might Also Enjoy</h1>
+					<?php
+						$category = get_the_category();
+						$category = $category[0]->cat_ID;
+
+						$args = array(
+							'numberposts' => 4,
+							'category' => $category,
+							'exclude' => $post->ID
+						);
+						
+						$related = get_posts( $args );
+						
+					?>
+					<?php foreach ($related as $post): ?>
+						<div class="related">
+							<a href="<?php echo get_permalink( $post->ID );?>">
+							<figure><?php echo get_attached_images( $post->ID, 'preview', TRUE ); ?></figure>
+							<h3><?php echo $post->post_title; ?></h3>
+							</a>
+						</div>
+					<?php endforeach ?>
+				</section>
 			</article>
 		<?php endwhile; ?>
 		<?php if ( $wp_query->max_num_pages > 1 ): ?>

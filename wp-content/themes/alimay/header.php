@@ -18,7 +18,7 @@
 
 	<div id="container" class="wide">
 		<header class="<?php if ( '565' == $post->post_parent ) { echo "open"; } else { echo "closed";} ?>">
-			<?php if ( is_home() || is_single() || is_search() || is_archive() || is_page_template('archives.php') ): ?>
+			<?php if ( is_home() || is_single() || is_search() || is_archive() || is_page_template('archives.php') || is_page_template('categories.php') ): ?>
 				<h1 id="blog-logo">
 					Run of Show by Alimay
 				</h1>
@@ -33,7 +33,7 @@
 				<a href="<?php echo get_permalink( 2 ); ?>"<?php if ( is_page('portfolio') || '2' == $post->post_parent ) { echo " class='active'"; } ?>>Portfolio</a>
 				<a href="<?php echo get_permalink( 17 ); ?>"<?php if ( is_page( 'praise' )) { echo " class='active'"; } ?>>Praise</a>
 				<a href="<?php echo get_permalink( 688 ); ?>" <?php if ( is_page( 'contact' )) { echo "class='active'"; } ?>>Contact</a>
-				<a href="<?php echo get_permalink( 97 ); ?>"<?php if ( is_home() || is_single() || is_archive() || is_page_template('archives.php') ) {
+				<a href="<?php echo get_permalink( 97 ); ?>"<?php if ( is_home() || is_single() || is_archive() || is_page_template('archives.php') || is_page_template('categories.php') ) {
 					echo " class='active'";
 				} ?>>The Blog</a>
 			</nav>

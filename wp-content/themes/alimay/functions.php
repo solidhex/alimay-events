@@ -9,6 +9,7 @@ add_image_size( 'magazine-modal', 664, 418, true );
 add_image_size( 'featured', 127, 82, true );
 add_image_size( 'online', 162, 106, true );
 add_image_size( 'headshot', 198, 272, true );
+add_image_size( 'preview', 100, 100, true );
 
 // add support for featured images
 add_theme_support( 'post-thumbnails' );
