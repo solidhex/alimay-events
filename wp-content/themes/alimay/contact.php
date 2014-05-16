@@ -26,7 +26,7 @@
 	$errors = array();
 	$missing = array();
 	// check if the form has been submitted
-	if (isset($_POST['_submit'])) {
+	if (isset($_POST['_submit']) && isset($_POST['url']) && $_POST['url'] == '' ) {
 	  // email processing script
 	  $to = 'info@alimayevents.com';
 	  $subject = 'Feedback from Website';
@@ -36,6 +36,7 @@
 	  $required = array('your_name', 'guests_number', 'email_address', 'location', 'type_planning', 'date', 'type_event', 'budget', 'note_alimay');
 	  // create additional headers
 	  $headers = "From: Alimay Contact Form <info@alimayevents.com>\r\n";
+	  $headers .= "Bcc: lastexittospringfield@gmail.com\r\n";
 	  $headers .= 'Content-Type: text/plain; charset=utf-8';
 	  require('processmail.inc.php');
 	}
@@ -115,6 +116,9 @@
 					<?php if ( $missing && in_array('note_alimay', $missing) ): ?>
 						<span class="warning">Please enter your notes</span>
 					<?php endif ?>
+				</li>
+				<li id="blarp" class="single">
+					<input type="text" name="url" value="" id="url" placeholder="http://example.com">
 				</li>
 				<li class="actions single">
 					<span class="notes">
