@@ -71,6 +71,9 @@ form[role='search'] {
 }
 
 #commentform {
+	.captchaSizeDivSmall {
+		margin-bottom: 14px;
+	}
 	textarea,
 	input[type='text']
 	{
