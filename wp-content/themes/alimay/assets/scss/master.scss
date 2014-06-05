@@ -295,7 +295,9 @@ body {
 					letter-spacing: 0.4px;
 					text-align: center;
 					text-transform: uppercase;
-					em {
+					em,
+					span
+					{
 						display: block;
 						margin: 5px 0 25px;
 						font: italic 14px 'Didot';
