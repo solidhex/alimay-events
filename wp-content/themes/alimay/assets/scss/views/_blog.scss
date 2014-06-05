@@ -334,16 +334,18 @@
 				@include pie-clearfix;
 				width: 550px;
 				padding: 15px 0 0 18px;
-				a.comments {
-					color: #241720;
+				.comments {
 					float: left;
-					display: inline-block;
-					margin: 2px 0 0 0;
-					font-size: 14px;
-					text-transform: uppercase;
-					&:hover {
-						color: $highlight;
-					}
+					a {
+						color: #241720;
+						display: inline-block;
+						margin: 2px 0 0 0;
+						font-size: 14px;
+						text-transform: uppercase;
+						&:hover {
+							color: $highlight;
+						}
+					}	
 				}
 				.sharing {
 					float: right;

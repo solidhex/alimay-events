@@ -18,7 +18,7 @@
 					<?php the_content(); ?>
 				</div>
 				<footer>
-					<a href="<?php comments_link(); ?>" class="comments"><?php comments_number( 'no comments', '1 comment', '% comments' ); ?></a>
+					<div class="comments"><a href="<?php comments_link(); ?>"><?php comments_number( 'no comments', '1 comment', '% comments' ); ?></a> | <a href="<?php echo get_permalink(); ?>#respond">Add A Comment</a></div>
 					<div class="sharing">
 						<div class="addthis_toolbox addthis_default_style">
 							<a class="addthis_button_pinterest"></a>
