@@ -33,18 +33,21 @@
 	<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/maya-headshot.png" width="300" height="394" alt="Maya Headshot">
 </section>
 
+<?php
+	$args = array(
+		'sort_column' => 'menu_order',
+		'child_of' => 567
+	);
+	
+	$bios = get_pages( $args );
+	
+	if ( $bios ) :
+?>
+
 <section class="about team">
 	<h1>meet our team</h1>
 	<ul>
 	<?php
-	
-		$args = array(
-			'sort_column' => 'menu_order',
-			'child_of' => 567
-		);
-			
-		$bios = get_pages( $args );
-		
 		foreach( $bios as $bio ) :
 	?>
 		<li>
@@ -60,6 +63,8 @@
 	<?php endforeach; ?>
 	</ul>
 </section>
+
+<?php endif; ?>
 
 <section class="about mayaandali">
 	<h1><span>stylish. expert. fun.</span> your event concierge</h1>
