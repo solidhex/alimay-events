@@ -8,21 +8,8 @@ add_image_size( 'magazine-thumb', 162, 214, true );
 add_image_size( 'magazine-modal', 664, 418, true );
 add_image_size( 'featured', 127, 82, true );
 add_image_size( 'online', 162, 106, true );
-add_image_size( 'headshot', 198, 272, true );
-add_image_size( 'preview', 100, 100, true );
 
 // add support for featured images
 add_theme_support( 'post-thumbnails' );
-
-function is_developer($user_name)
-{
-	$user = wp_get_current_user(); 
-	
-	if ($user->user_login == $user_name) {
-		return true;
-	} else {
-		return false;
-	}
-}
 
 ?>

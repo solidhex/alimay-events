@@ -43,9 +43,6 @@ input {
 	font: 16px 'Conv_mreavessanotreg';
 	letter-spacing: 1.6px;
 	text-transform: uppercase;
-	&:hover {
-		background: #ad7826;
-	}
 }
 	
 
@@ -71,9 +68,6 @@ form[role='search'] {
 }
 
 #commentform {
-	.captchaSizeDivSmall {
-		margin-bottom: 14px;
-	}
 	textarea,
 	input[type='text']
 	{
@@ -178,9 +172,6 @@ ul.form-wrap {
 				color: #827f7f;
 				font: 11px/21px Arial, sans-serif;
 			}
-		}
-		&#blarp {
-			display: none;
 		}
 	}
 }

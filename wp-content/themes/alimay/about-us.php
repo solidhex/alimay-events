@@ -36,7 +36,7 @@
 <?php
 	$args = array(
 		'sort_column' => 'menu_order',
-		'child_of' => 567
+		'child_of' => $post->ID
 	);
 	
 	$bios = get_pages( $args );

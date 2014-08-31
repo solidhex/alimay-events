@@ -24,7 +24,8 @@
 							<a class="addthis_button_pinterest"></a>
 							<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
 							<a class="addthis_button_tweet"></a>
-							<a class="addthis_button_facebook_send"></a>
+							<!-- <a class="addthis_button_facebook_send"></a> -->
+							<a class="addthis_button_facebook_share" fb:share:layout="button"></a>
 						</div>
 					</div>
 				</footer>
