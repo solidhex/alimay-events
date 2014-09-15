@@ -18,7 +18,7 @@
 
 	<div id="container" class="wide">
 		<header class="<?php if ( '565' == $post->post_parent ) { echo "open"; } else { echo "closed";} ?>">
-			<?php if ( is_home() || is_single() || is_search() || is_archive() ): ?>
+			<?php if ( is_home() || is_single() || is_search() || is_archive() || is_page( 'categories' ) || is_page( 'archive' ) ): ?>
 				<h1 id="blog-logo">
 					Run of Show by Alimay
 				</h1>
