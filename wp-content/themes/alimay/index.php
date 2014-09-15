@@ -21,7 +21,6 @@
 					<div class="comments"><a href="<?php comments_link(); ?>"><?php comments_number( 'no comments', '1 comment', '% comments' ); ?></a> | <a href="<?php echo get_permalink(); ?>#respond">Add A Comment</a></div>
 					<div class="sharing">
 						<div class="addthis_toolbox addthis_default_style">
-							<a class="addthis_button_pinterest"></a>
 							<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
 							<a class="addthis_button_tweet"></a>
 							<a class="addthis_button_facebook_share" fb:share:layout="button"></a>

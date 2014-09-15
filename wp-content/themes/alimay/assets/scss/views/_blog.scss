@@ -330,6 +330,16 @@
 					margin-left: -18px;
 				}
 			}
+			.the-content {
+				a {
+					color: #241720;
+					text-decoration: underline;
+					&:hover {
+						color: $highlight;
+					}
+				}
+			}
+				
 			> footer {
 				@include pie-clearfix;
 				width: 550px;
@@ -553,6 +563,12 @@
 		float: left;
 		margin: 22px 19px 0 0;
 		width: 100px;
+		a {
+			color: #241720;
+			&:hover {
+				color: $highlight;
+			}
+		}
 		&:last-child {
 			margin-right: 0;
 			margin-left: 1px;
