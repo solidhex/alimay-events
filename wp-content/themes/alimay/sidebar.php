@@ -60,7 +60,7 @@
 		<section class="module elsewhere">
 			<h1 class="alternate">Alimay Elsewhere</h1>
 			<figure>
-				<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/fpo/refinery29.png" width="288" height="149" alt="Alimay Elsewhere - Refinery 29">
+				<a href="http://www.refinery29.com/author/alimay-events" title=""><img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/fpo/refinery29.png" width="288" height="149" alt="Alimay Elsewhere - Refinery 29"></a>
 			</figure>
 			<p>Contributors on <a href="http://www.refinery29.com/author/alimay-events" title="">Refinery 29</a></p>
 		</section>
