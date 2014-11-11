@@ -88,6 +88,15 @@
 		//$(this).toggleClass("active");
 		
 	});
+	
+	$(".trimmings-slider > div").bxSlider({
+		pager: false,
+		mode: "fade",
+		auto: "auto",
+		slideWidth: 1003, 
+		controls: false,
+		responsive: false
+	});
 
 	
 })(jQuery);

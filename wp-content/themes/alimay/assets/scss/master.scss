@@ -287,6 +287,16 @@ body {
 					}
 				}
 			}
+			.trimmings-slider {
+				background: transparent url('../img/backdrop.png') 0 0 no-repeat;
+				width: 1030px;
+				height: 329px;
+				padding: 13px 0 0 14px;
+				overflow: hidden;
+				.bx-wrapper {
+					margin: 0 !important;
+				}
+			}
 		}
 		.about {
 			font-family: 'Conv_mreavessanotreg';
