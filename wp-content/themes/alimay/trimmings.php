@@ -26,7 +26,7 @@
 	 
 		$user = wp_get_current_user();
 		
-		if ( $user->user_nicename == 'dev' ): 
+		if ( $user->user_nicename == 'dev' || $user->user_nicename == 'kendra' ): 
 	?>
 	<div class="trimmings-slider">
 		<div>
