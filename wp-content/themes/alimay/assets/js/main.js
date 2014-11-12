@@ -95,7 +95,8 @@
 		auto: "auto",
 		slideWidth: 1003, 
 		controls: false,
-		responsive: false
+		responsive: false,
+		speed: 650
 	});
 
 	
